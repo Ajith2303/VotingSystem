@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Thank You</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css"/>
+</head>
+<body class="bg">
+<div class="card">
+    <h1>Thanks for voting!</h1>
+    <p th:if="${candidateName}">You voted for <strong th:text="${candidateName}"></strong>.</p>
+    <p class="muted"><a th:href="@{/results}">See results</a></p>
+</div>
+</body>
+</html>

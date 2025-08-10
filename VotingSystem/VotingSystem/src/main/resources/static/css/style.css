@@ -1,0 +1,125 @@
+/* General body styles */
+body.bg {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card container */
+.card {
+  background: white;
+  width: 360px;
+  max-width: 95%;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Titles */
+h1, h2 {
+  margin-top: 0;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Input fields */
+input[type="text"] {
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin: 14px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37, 117, 252, 0.4);
+  outline: none;
+}
+
+/* Buttons and links styled as buttons */
+button, .btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Candidate rows */
+.candidate-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 6px 0;
+  background: #f9f9f9;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.candidate-row:hover {
+  background: #eef3ff;
+}
+
+/* Results table */
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.results-table th, .results-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.results-table th {
+  background: #f4f6fa;
+  font-weight: bold;
+}
+
+/* Muted text and errors */
+.muted {
+  color: #6b7280;
+  font-size: 13px;
+  margin-top: 12px;
+}
+
+.error {
+  color: #c0392b;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+    width: 90%;
+  }
+}
